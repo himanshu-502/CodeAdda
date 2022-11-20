@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign-up-form.css">
+    <title>Form</title>
+</head>
+<body>
+    <h1 class="heading">Sign Up</h1>
+    <div class="Form">
+        <form name="myform" method="post" action="createNewUser.php" onsubmit = "return validateForm();">
+            
+            <pre>UserID:   <input type="text" name="userid" placeholder="required and must of length 5 and 12"></pre>
+            <pre>Password:<input type="password" name="password" placeholder="required and must of length 7 and 12"><br></pre>
+            <pre>Confirm Password:<input type="password" name="password1" placeholder="required and must of length 7 and 12"><br></pre>
+            <pre>Name:     <input type="text" name="name" placeholder="Required and alphabets only"><br></pre>
+            <pre>Phone:     <input type="number" name="phone" placeholder="Enter your phone number"><br></pre>
+            <pre>Email:    <input type="email" name="email" placeholder="required and must be valid email"><br></pre>
+            <pre>Are you firm?:<label for="NO">No</label><input type="radio" onclick="firmRemoveDisplay()" name="firm" id="NO" value="0"><label for="YES">Yes<input type="radio" onclick="firmShowDisplay()" name="firm" id="YES" value="1"></label>
+            <div class="firmProperties">GSTIN NUMBER:<input type="text" name="GSTIN" placeholder="Enter GSTIN Number"></div>
+            <div class="firmProperties">FIRM LOGO:<input type="file" name="LOGO" accept="image/*"></div>
+            <div class="submitbutton"><input type="submit" value="Submit"></div>
+        </form>
+    </div>   
+    <script src="sign-up-form.js"></script>
+</body>
+</html>
